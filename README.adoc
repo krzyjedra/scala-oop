@@ -1,0 +1,46 @@
+= Calendar class
+:numbered:
+:toc: preamble
+:toc-title: Table of contents
+
+App can have days with tasks assigned.
+The application doesn't allow the user to add overlapping (happening at the same time) tasks.
+Tasks can be recurring.
+
+== Dependencies
+
+You are going to need the following:
+
+* Java 8+
+* Scala 2.13+
+
+== How to run
+
+* Clone the repository and run.
+
+----
+git clone
+https://github.com/krzyjedra/scala-oop.git
+----
+
+== Example of usage
+
+You can check such input:
+
+----
+Calendar(365).dayScheduler("bieganie", 5)
+----
+
+Also don't hesitate to check more in tests.
+
+== Troubleshooting
+
+* If ScalaTest is not working please check your `build.sbt` file
+
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.12"
+
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.12" % "test"
+
+* Please remember that calendar can't have more days than 365 or less than 1.
+* Please remember that you can't assign two tasks one by one to single day.
+In such scenario app will only take first input record.
